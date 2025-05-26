@@ -67,9 +67,9 @@ RetrainingScheduler/
 Whether you run from Visual Studio or the command line, the application will start, and you should see the following options in your console:
 
 
-Select 1 to proceed with default talks.
+Select `1` to proceed with default talks.
 
-Select 2 to manually enter your own list of talks:
+Select `2` to manually enter your own list of talks:
 
 Format: Title, Duration
 
