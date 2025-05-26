@@ -40,6 +40,7 @@ RetrainingScheduler/
 **Prerequisites:**
 
 1.  Ensure you have **.NET 8.0 SDK or later** installed on your system. You can check your installed SDKs by running `dotnet --list-sdks` in your command line. If you don't have it, download it from the official .NET website.
+2. Clone or unzip the source
 
 **Running in Visual Studio:**
 
@@ -67,51 +68,47 @@ RetrainingScheduler/
 Whether you run from Visual Studio or the command line, the application will start, and you should see the following options in your console:
 
 
-Select `1` to proceed with default talks.
+- Select `1` to proceed with default talks.
 
-Select `2` to manually enter your own list of talks:
+- Select `2` to manually enter your own list of talks:
 
-Format: Title, Duration
+- Format: Title, Duration
 
-Use lightning for 5-minute talks.
+- Use lightning for 5-minute talks.
 
-Type done to finish input.
+- Type done to finish input.
 
 
 ## 🧠 Scheduling Logic
-Morning Session: 9:00 AM – 12:00 PM (180 minutes)
+- Morning Session: 9:00 AM – 12:00 PM (180 minutes)
 
-Afternoon Session: 1:00 PM – 4:00–5:00 PM (max 240 minutes)
+- Afternoon Session: 1:00 PM – 4:00–5:00 PM (max 240 minutes)
 
-Sharing Session: Begins after 4 PM, no later than 5 PM (ends at 5:30 PM)
+- Sharing Session: Begins after 4 PM, no later than 5 PM (ends at 5:30 PM)
 
-Backtracking is used to find the best combination of talks that fills each session without exceeding the limits.
+- Backtracking is used to find the best combination of talks that fills each session without exceeding the limits.
+
 
 ## 📝 Assumptions
-All talk titles are free of numbers (validated).
+- All talk titles are free of numbers (validated).
 
-"lightning" talks are interpreted as 5 minutes.
+- "lightning" talks are interpreted as 5 minutes.
 
-Lunch is fixed at 12:00 PM.
+- Lunch is fixed at 12:00 PM.
 
-Talks are only scheduled once across all tracks.
+- Talks are only scheduled once across all tracks.
 
 ## 💡 Future Improvements
-Export schedules to PDF or CSV.
-
-Add web-based UI using Blazor or ASP.NET Core.
-
-Support fixed-time talks (e.g., keynote always at 9 AM).
-
-Enable user-defined track/session durations via config.
+- Export schedules to PDF or CSV.
+- Support fixed-time talks (e.g., keynote always at 9 AM).
+- Add web-based UI using Vue/React or ASP.NET Core.
+- Lunch Timing: Could be dynamic (based on end of morning session), though fixed at 12PM is acceptable per spec.
+- Scalability: For large dataset maybe fine turn the backtracking algorithm or use dynamic programming approuch
+- Enable user-defined track/session durations via configuration
 
 ## 👨‍💻 Author
 Eduke Ohien Stephen
+
 Submitted for the NewGlobe Full Stack Engineer Coding Challenge.
+
 Built with ❤️ using C# and .NET.
-
-
-## 📌 Future Enhancements
-- Lunch Timing: Could be dynamic (based on end of morning session), though fixed at 12PM is acceptable per spec.
-- Scalability: For large dataset maybe fine turn the backtracking algorithm or use dynamic programming approuch
-- Configurable Constraints (optional): Hardcoded constants like 180/240 minutes could be refactored to config parameters. (not really a big deal though)
