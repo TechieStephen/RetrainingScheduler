@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrainingSchedular", "RetrainingSchedular\RetrainingSchedular.csproj", "{C7404295-FE6A-4749-B357-F492AC13DE9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrainingSchdular.Test", "RetrainingSchdular.Test\RetrainingSchdular.Test.csproj", "{0805FBF3-878F-4DF9-80CA-EDA5B49C41BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrainingSchedular.Test", "RetrainingSchdular.Test\RetrainingSchedular.Test.csproj", "{0805FBF3-878F-4DF9-80CA-EDA5B49C41BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

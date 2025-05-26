@@ -102,7 +102,8 @@ Whether you run from Visual Studio or the command line, the application will sta
 - Talks are only scheduled once across all tracks.
 
 ## 💡 Future Improvements
-- Export schedules to PDF or CSV.
+- Optional UX Ideas: Show a summary of entered talks before continuing
+- Let user edit or delete a talk entry before submitting
 - Support fixed-time talks (e.g., keynote always at 9 AM).
 - Add web-based UI using Vue/React or ASP.NET Core.
 - Lunch Timing: Could be dynamic (based on end of morning session), though fixed at 12PM is acceptable per spec.

@@ -31,7 +31,7 @@ namespace RetrainingSchedular
         }
 
         /// <summary>
-        /// Calculates start times for a list of talks based on an initial start time.
+        /// Calculates start times for a list of talks based on an inital start time.
         /// </summary>
         /// <param name="talks">The list of <see cref="Talk"/> instances to schedule.</param>
         /// <param name="startTime">The base <see cref="TimeSpan"/> to start scheduling from.</param>
@@ -63,6 +63,35 @@ namespace RetrainingSchedular
         public static string FormatTime(TimeSpan time)
         {
             return DateTime.Today.Add(time).ToString("hh:mmtt");
+        }
+
+
+        /// <summary>
+        /// Writes a list of strings to a 'schedule.txt' file in the user's Downloads folder.
+        /// </summary>
+        /// <param name="lines">The lines of text to write to the file.</param>
+        public static void DownloadToTextFile(List<string> lines, string fileName = "schedule.txt")
+        {
+            try
+            {
+                var downloadsPath = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                    "Downloads"
+                );
+
+                if (!Directory.Exists(downloadsPath))
+                    Directory.CreateDirectory(downloadsPath);
+
+                var filePath = Path.Combine(downloadsPath, fileName);
+
+                File.WriteAllLines(filePath, lines);
+
+                Console.WriteLine($"Schedule saved to: {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to write schedule to file: {ex.Message}");
+            }
         }
     }
 }
