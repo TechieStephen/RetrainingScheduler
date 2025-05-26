@@ -20,32 +20,22 @@ This is a command-line scheduling tool developed for the NewGlobe Full Stack Eng
 
 ## 🗂️ Project Structure
 
+```bash
 RetrainingScheduler/
 
 │
-
 ├── Models/
-
 │   ├── Talk.cs            # Model for training session (title, duration)
-
 │   └── Track.cs           # Model for a single track (morning + afternoon + sharing session)
-
 │
-
 ├── Helpers.cs             # Validation, time formatting, schedule formatting
-
 ├── Schedular.cs           # Core logic (backtracking, greedy fitting, track generation)
-
 ├── Program.cs             # CLI entry point for user interaction and output
-
 │
-
 ├── RetrainingSchedular.Test/
-
 │   ├── HelpersTest.cs     # Unit tests for Helpers
-
 │   └── SchedularTest.cs   # Unit tests for Schedular logic
-
+```
 
 
 ## ▶️ Running the Project
